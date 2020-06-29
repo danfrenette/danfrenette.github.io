@@ -1,36 +1,42 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithubAlt, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import headshot from "../headshot.jpg";
 
 export const Content = () => {
   return (
     <div className="main">
       <div className="text-wrapper">
         <div className="text fade-in-upward">
-          <a href="http://andmade.co">
-            <img
-              id="avy"
-              alt="Dan Frenette"
-              src="http://www.gravatar.com/avatar/c7c1224bdb32dcb2ddd2bbff48736002.png"
-            />
-          </a>
-          <h1>Hi, I'm Headline.</h1>
+          <img id="headshot" alt="Dan Frenette" src={headshot} />
+          <h1>Hi, I'm Dan Frenette</h1>
           <h2>
-            This is a simple template. You can put your description here. It's
-            responsive and you can include nice{" "}
-            <a href="http://google.com" id="link">
-              links
-            </a>
-            .
+            I'm a <em>Full-Stack Software Engineer</em> working for{" "}
+            <a href="https://thegnar.co">The Gnar Company</a>.
           </h2>
-          <a href="https://www.github.com/danfrenette" className="social">
+          <a
+            href="https://www.github.com/danfrenette"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social github"
+          >
             <FontAwesomeIcon icon={faGithubAlt} />
           </a>
-          <a href="https://www.linkedin.com/in/danfrenette" className="social">
+          <a
+            href="https://www.linkedin.com/in/danfrenette"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social linkedin"
+          >
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
-          <a href="mailto:danfrenette@hey.com" className="social" id="mailbtn">
+          <a
+            href="mailto:danfrenette@hey.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social email"
+          >
             <FontAwesomeIcon icon={faEnvelope} />
           </a>
         </div>

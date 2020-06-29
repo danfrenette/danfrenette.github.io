@@ -14434,7 +14434,7 @@ p {
   width: 91.666667%;
   text-align: left;
   @media (min-width: 768px) {
-    width: 66.666667%;
+    width: 33.333333%;
 
     bottom: 100px;
 
@@ -14446,11 +14446,11 @@ p {
   animation: fadeInUpward 1s;
 }
 
-#avy {
+#headshot {
   margin-bottom: 1rem;
   border-radius: 9999px;
-  height: 6rem;
-  width: 6rem;
+  height: 4rem;
+  width: 4rem;
 }
 
 .social {
@@ -14469,12 +14469,36 @@ p {
   display: inline-block;
 }
 
+.github {
+  background: #211F1F;
+}
+
+.linkedin {
+  background: #0072b1;
+}
+
+.email {
+  background: #d23028;
+}
+
 .social:hover {
   opacity: 1;
 }
 
-#link:hover {
+.text-link {
+  --text-opacity: 1;
+  color: #e2e8f0;
+  color: rgba(226, 232, 240, var(--text-opacity));
+  border-bottom-width: 2px;
+  --border-opacity: 1;
+  border-color: #fff;
+  border-color: rgba(255, 255, 255, var(--border-opacity))
+}
+
+.text-link {
+  --text-opacity: 1;
   color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
   opacity: 1;
 }
 

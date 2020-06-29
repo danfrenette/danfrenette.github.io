@@ -88,7 +88,7 @@ p {
   .text-left;
 
   @screen md {
-    @apply .w-2/3;
+    @apply .w-1/3;
     bottom: 100px;
     left: 0;
   }
@@ -98,11 +98,11 @@ p {
   animation: fadeInUpward 1s;
 }
 
-#avy {
+#headshot {
   @apply .mb-4
   .rounded-full
-  .h-24
-  .w-24;
+  .h-16
+  .w-16;
 }
 
 .social {
@@ -117,13 +117,31 @@ p {
   .inline-block;
 }
 
+.github {
+  background: #211F1F;
+}
+
+.linkedin {
+  background: #0072b1;
+}
+
+.email {
+  background: #d23028;
+}
+
 .social:hover {
   opacity: 1;
 }
 
-#link:hover {
-  color: #fff;
-  opacity: 1;
+.text-link {
+  @apply .text-gray-300
+  .border-b-2
+  .border-white
+}
+
+.text-link {
+  @apply .text-white
+  .opacity-100;
 }
 
 .fa {
