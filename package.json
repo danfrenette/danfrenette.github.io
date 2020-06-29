@@ -23,8 +23,8 @@
     "tailwindcss postcss-cli autoprefixer npm-run-all ": "fullhuman/postcss-purgecss"
   },
   "scripts": {
-    "build:css": "postcss src/style.scss -o src/index.css",
-    "watch:css": "postcss src/style.scss -o src/index.css -w",
+    "build:css": "postcss src/style.scss -o src/index.scss",
+    "watch:css": "postcss src/style.scss -o src/index.scss -w",
     "start": "npm run watch:css & react-scripts start",
     "build": "npm run build:css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
