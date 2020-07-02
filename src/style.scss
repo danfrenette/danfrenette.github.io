@@ -92,6 +92,13 @@ p {
     bottom: 100px;
     left: 0;
   }
+
+  .text {
+    @apply .bg-gray-800
+    .rounded
+    .p-2
+    .bg-opacity-25;
+  }
 }
 
 .fade-in-upward {

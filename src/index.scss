@@ -14440,6 +14440,14 @@ p {
 
     left: 0;
   }
+  .text {
+    --bg-opacity: 1;
+    background-color: #2d3748;
+    background-color: rgba(45, 55, 72, var(--bg-opacity));
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    --bg-opacity: 0.25;
+  }
 }
 
 .fade-in-upward {

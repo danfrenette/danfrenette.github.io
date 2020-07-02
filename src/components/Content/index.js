@@ -8,8 +8,8 @@ export const Content = () => {
   return (
     <div className="main">
       <div className="text-wrapper">
+        <img id="headshot" alt="Dan Frenette" src={headshot} />
         <div className="text fade-in-upward">
-          <img id="headshot" alt="Dan Frenette" src={headshot} />
           <h1>Hi, I'm Dan Frenette</h1>
           <h2>
             I'm a <em>Full-Stack Software Engineer</em> working for{" "}
