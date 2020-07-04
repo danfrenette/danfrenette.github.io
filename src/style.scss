@@ -2,6 +2,9 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+$cream: #faf9f7;
+$void: #1f2933;
+
 html {
   @apply .h-full
   .my-0
@@ -40,6 +43,7 @@ h1 {
 
 h2 {
   font-family: "Lato", sans-serif;
+  color: $cream;
 
   @apply .font-light
   .leading-snug
@@ -53,15 +57,58 @@ h2 {
   @screen md {
     @apply .text-2xl;
   }
+
+  button,
+  a {
+    color: $cream;
+
+    @apply .font-medium
+    .relative
+    .no-underline
+    .inline-block;
+  }
+
+  button:focus,
+  a:focus {
+    @apply .outline-none;
+  }
+
+  button::before,
+  a::before {
+    background-color: $cream;
+    content: "";
+    height: 2px;
+    transform: scaleX(0);
+
+    @apply .absolute
+    .w-full
+    .bottom-0
+    .left-0
+    .invisible
+    .transition
+    .ease-in-out
+    .duration-300;
+  }
+
+  button:hover::before,
+  a:hover::before {
+    @apply .visible;
+    transform: scaleX(1);
+  }
+
+  button:focus::before,
+  a:focus::before {
+    @apply .visible;
+    transform: scaleX(1);
+  }
 }
 
 p {
   font-family: "Merriweather", serif;
-  color: #414141;
+  color: $cream;
 
   @apply .text-lg
   .leading-relaxed
-  .text-white
   .font-light
   .m-0;
 }
@@ -83,6 +130,7 @@ p {
 
   @apply .overflow-hidden
   .m-auto
+  .p-2
   .text-white
   .w-11/12
   .text-left;
@@ -94,10 +142,24 @@ p {
   }
 
   .text {
-    @apply .bg-gray-800
-    .rounded
+    background: linear-gradient(55deg, rgba($void, 0.8), rgba($void, 0.4));
+
+    @apply .rounded
     .p-2
     .bg-opacity-25;
+  }
+
+  .posts {
+    @apply .text-center
+    .h-auto;
+
+    .post:focus {
+      @apply .outline-none;
+    }
+  }
+
+  .posts h2:last-child {
+    @apply .mb-0;
   }
 }
 
@@ -105,11 +167,24 @@ p {
   animation: fadeInUpward 1s;
 }
 
-#headshot {
-  @apply .mb-4
-  .rounded-full
-  .h-16
-  .w-16;
+.fade-out-upward {
+  animation: fadeOutUpward 1s;
+}
+
+.headshot-wrapper {
+  @apply .mb-4;
+
+  #headshot {
+    @apply .rounded-full
+    .h-16
+    .w-16;
+  }
+}
+
+.headshot-wrapper:focus {
+  box-shadow: 0px 0px 9px 4px $void;
+  @apply .outline-none
+  .rounded-full;
 }
 
 .social {
@@ -120,12 +195,24 @@ p {
   .box-border
   .m-1
   .cursor-pointer
-  .opacity-75
-  .inline-block;
+  .opacity-50
+  .inline-block
+  .transition
+  .ease-in-out
+  .duration-300;
+}
+
+.social:focus {
+  @apply .outline-none
+  .opacity-100;
+}
+
+.social:hover {
+  @apply .opacity-100;
 }
 
 .github {
-  background: #211F1F;
+  background: #211f1f;
 }
 
 .linkedin {
@@ -136,14 +223,10 @@ p {
   background: #d23028;
 }
 
-.social:hover {
-  opacity: 1;
-}
-
 .text-link {
   @apply .text-gray-300
   .border-b-2
-  .border-white
+  .border-white;
 }
 
 .text-link {
@@ -152,35 +235,29 @@ p {
 }
 
 .fa {
-  color: #fff;
+  color: $cream;
 }
 
-@-webkit-keyframes fadeInUpward {
+@keyframes fadeOutUpward {
   0% {
-    opacity: 0;
-    -webkit-transform: translateY(50px);
-    transform: translateY(50px);
+    opacity: 1;
+    transform: translateY(0);
   }
 
   100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+    opacity: 0;
+    transform: translateY(50px);
   }
 }
 
 @keyframes fadeInUpward {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(50px);
-    -ms-transform: translateY(50px);
     transform: translateY(50px);
   }
 
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
     transform: translateY(0);
   }
 }

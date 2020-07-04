@@ -14343,6 +14343,10 @@ video {
   transition-delay: 1000ms;
 }
 
+$cream: #faf9f7;
+
+$void: #1f2933;
+
 html {
   height: 100%;
   margin-top: 0;
@@ -14387,6 +14391,7 @@ h1 {
 
 h2 {
   font-family: "Lato", sans-serif;
+  color: $cream;
   font-weight: 300;
   line-height: 1.375;
   font-size: 1.125rem;
@@ -14398,16 +14403,50 @@ h2 {
   @media (min-width: 768px) {
     font-size: 1.5rem;
   }
+  button,
+  a {
+    color: $cream;
+    font-weight: 500;
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+  }
+  button:focus,
+  a:focus {
+    outline: 0;
+  }
+  button::before,
+  a::before {
+    background-color: $cream;
+    content: "";
+    height: 2px;
+    transform: scaleX(0);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+  button:hover::before,
+  a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+  button:focus::before,
+  a:focus::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
 }
 
 p {
   font-family: "Merriweather", serif;
-  color: #414141;
+  color: $cream;
   font-size: 1.125rem;
   line-height: 1.625;
-  --text-opacity: 1;
-  color: #fff;
-  color: rgba(255, 255, 255, var(--text-opacity));
   font-weight: 300;
   margin: 0;
 }
@@ -14428,6 +14467,7 @@ p {
   right: 0;
   overflow: hidden;
   margin: auto;
+  padding: 0.5rem;
   --text-opacity: 1;
   color: #fff;
   color: rgba(255, 255, 255, var(--text-opacity));
@@ -14441,12 +14481,20 @@ p {
     left: 0;
   }
   .text {
-    --bg-opacity: 1;
-    background-color: #2d3748;
-    background-color: rgba(45, 55, 72, var(--bg-opacity));
+    background: linear-gradient(55deg, rgba($void, 0.8), rgba($void, 0.4));
     border-radius: 0.25rem;
     padding: 0.5rem;
     --bg-opacity: 0.25;
+  }
+  .posts {
+    text-align: center;
+    height: auto;
+    .post:focus {
+      outline: 0;
+    }
+  }
+  .posts h2:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -14454,11 +14502,23 @@ p {
   animation: fadeInUpward 1s;
 }
 
-#headshot {
+.fade-out-upward {
+  animation: fadeOutUpward 1s;
+}
+
+.headshot-wrapper {
   margin-bottom: 1rem;
+  #headshot {
+    border-radius: 9999px;
+    height: 4rem;
+    width: 4rem;
+  }
+}
+
+.headshot-wrapper:focus {
+  box-shadow: 0px 0px 9px 4px $void;
+  outline: 0;
   border-radius: 9999px;
-  height: 4rem;
-  width: 4rem;
 }
 
 .social {
@@ -14473,12 +14533,24 @@ p {
   box-sizing: border-box;
   margin: 0.25rem;
   cursor: pointer;
-  opacity: 0.75;
+  opacity: 0.5;
   display: inline-block;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.social:focus {
+  outline: 0;
+  opacity: 1;
+}
+
+.social:hover {
+  opacity: 1;
 }
 
 .github {
-  background: #211F1F;
+  background: #211f1f;
 }
 
 .linkedin {
@@ -14489,10 +14561,6 @@ p {
   background: #d23028;
 }
 
-.social:hover {
-  opacity: 1;
-}
-
 .text-link {
   --text-opacity: 1;
   color: #e2e8f0;
@@ -14500,7 +14568,7 @@ p {
   border-bottom-width: 2px;
   --border-opacity: 1;
   border-color: #fff;
-  border-color: rgba(255, 255, 255, var(--border-opacity))
+  border-color: rgba(255, 255, 255, var(--border-opacity));
 }
 
 .text-link {
@@ -14511,7 +14579,19 @@ p {
 }
 
 .fa {
-  color: #fff;
+  color: $cream;
+}
+
+@keyframes fadeOutUpward {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
 }
 
 @keyframes fadeInUpward {
