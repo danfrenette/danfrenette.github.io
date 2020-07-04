@@ -4,13 +4,18 @@ import { Bio } from "../Bio";
 import { Posts } from "../Posts";
 
 export const Content = () => {
-  const [displayPosts, setDisplayPosts] = useState(true); // should default to false
+  const [displayPosts, setDisplayPosts] = useState(false); // should default to false
 
   return (
     <div className="main">
       <div className="text-wrapper">
-        <img id="headshot" alt="Dan Frenette" src={headshot} />
-        <Bio />
+        <button
+          className="headshot-wrapper"
+          onClick={() => setDisplayPosts(false)}
+        >
+          <img id="headshot" alt="Dan Frenette" src={headshot} />
+        </button>
+        {displayPosts ? <Posts /> : <Bio setDisplayPosts={setDisplayPosts} />}
       </div>
     </div>
   );

@@ -3,13 +3,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithubAlt, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-export const Bio = () => {
+export const Bio = ({ setDisplayPosts }) => {
   return (
     <div className="text fade-in-upward">
       <h1>Hi, I'm Dan Frenette</h1>
       <h2>
-        I'm a <em>Full-Stack Software Engineer</em> working for{" "}
-        <a href="https://thegnar.co">The Gnar Company</a>.
+        I'm a Full-Stack Software Engineer at{" "}
+        <a href="https://thegnar.co">The Gnar Company</a>. I also{" "}
+        <button onClick={() => setDisplayPosts(true)}>love to write</button>.
       </h2>
       <a
         href="https://www.github.com/danfrenette"
@@ -28,7 +29,7 @@ export const Bio = () => {
         <FontAwesomeIcon icon={faLinkedin} />
       </a>
       <a
-        href="mailto:danfrenette@hey.com"
+        href="mailto:dan.r.frenette@gmail.com"
         target="_blank"
         rel="noopener noreferrer"
         className="social email"
