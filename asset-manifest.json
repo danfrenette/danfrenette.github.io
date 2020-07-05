@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/another-personal-site/static/css/main.037a0f6f.chunk.css",
-    "main.js": "/another-personal-site/static/js/main.02faae24.chunk.js",
-    "main.js.map": "/another-personal-site/static/js/main.02faae24.chunk.js.map",
-    "runtime-main.js": "/another-personal-site/static/js/runtime-main.eb2eda78.js",
-    "runtime-main.js.map": "/another-personal-site/static/js/runtime-main.eb2eda78.js.map",
-    "static/js/2.72bde6d9.chunk.js": "/another-personal-site/static/js/2.72bde6d9.chunk.js",
-    "static/js/2.72bde6d9.chunk.js.map": "/another-personal-site/static/js/2.72bde6d9.chunk.js.map",
-    "index.html": "/another-personal-site/index.html",
-    "precache-manifest.8147179714989506435c92f000960026.js": "/another-personal-site/precache-manifest.8147179714989506435c92f000960026.js",
-    "service-worker.js": "/another-personal-site/service-worker.js",
-    "static/css/main.037a0f6f.chunk.css.map": "/another-personal-site/static/css/main.037a0f6f.chunk.css.map",
-    "static/js/2.72bde6d9.chunk.js.LICENSE.txt": "/another-personal-site/static/js/2.72bde6d9.chunk.js.LICENSE.txt",
-    "static/media/headshot.jpg": "/another-personal-site/static/media/headshot.6e8ee4c6.jpg",
-    "static/media/index.scss": "/another-personal-site/static/media/nhbackground.6276eb07.jpg"
+    "main.css": "/static/css/main.be40b8c7.chunk.css",
+    "main.js": "/static/js/main.fc16b271.chunk.js",
+    "main.js.map": "/static/js/main.fc16b271.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d2146ca9.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d2146ca9.js.map",
+    "static/js/2.72bde6d9.chunk.js": "/static/js/2.72bde6d9.chunk.js",
+    "static/js/2.72bde6d9.chunk.js.map": "/static/js/2.72bde6d9.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.e250af56f532ce6eaac97c5db3e54199.js": "/precache-manifest.e250af56f532ce6eaac97c5db3e54199.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.be40b8c7.chunk.css.map": "/static/css/main.be40b8c7.chunk.css.map",
+    "static/js/2.72bde6d9.chunk.js.LICENSE.txt": "/static/js/2.72bde6d9.chunk.js.LICENSE.txt",
+    "static/media/headshot.jpg": "/static/media/headshot.6e8ee4c6.jpg",
+    "static/media/index.scss": "/static/media/nhbackground.6276eb07.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.eb2eda78.js",
+    "static/js/runtime-main.d2146ca9.js",
     "static/js/2.72bde6d9.chunk.js",
-    "static/css/main.037a0f6f.chunk.css",
-    "static/js/main.02faae24.chunk.js"
+    "static/css/main.be40b8c7.chunk.css",
+    "static/js/main.fc16b271.chunk.js"
   ]
 }
