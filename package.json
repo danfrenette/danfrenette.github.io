@@ -1,5 +1,5 @@
 {
-  "homepage": "http://danfrenette.github.io/another-personal-site",
+  "homepage": "https://danfrenette.com",
   "name": "another-personal-site",
   "version": "0.1.0",
   "private": true,
@@ -48,5 +48,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.3.0"
   }
 }
