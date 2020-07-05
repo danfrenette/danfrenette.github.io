@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import headshot from "../../headshot.jpg";
+import headshot from "../../images/headshot.jpg";
 import { Bio } from "../Bio";
 import { Posts } from "../Posts";
 
 export const Content = () => {
-  const [displayPosts, setDisplayPosts] = useState(false); // should default to false
+  const [displayPosts, setDisplayPosts] = useState(false);
 
   return (
     <div className="main">

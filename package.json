@@ -1,4 +1,5 @@
 {
+  "homepage": "http://danfrenette.github.io/another-personal-site",
   "name": "another-personal-site",
   "version": "0.1.0",
   "private": true,
@@ -11,6 +12,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "autoprefixer": "^9.8.4",
+    "gh-pages": "^3.1.0",
     "node-sass": "^4.14.1",
     "postcss-cli": "^7.1.1",
     "postcss-import": "^12.0.1",
@@ -28,7 +30,9 @@
     "start": "npm run watch:css & react-scripts start",
     "build": "npm run build:css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
